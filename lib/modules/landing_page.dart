@@ -17,6 +17,8 @@ class Home extends ConsumerStatefulWidget {
 
 class HomeState extends ConsumerState<Home> {
   List<Values> countriesList = [Values(id: 0, value: "Select")];
+  List<Values> statesList = [Values(id: 0, value: "Select")];
+
   @override
   void initState() {
     Future.delayed(const Duration(milliseconds: 500), () {
@@ -27,6 +29,12 @@ class HomeState extends ConsumerState<Home> {
 
   getCountries() {
     ref.read(countriesNotifierProvider.notifier).getCountries();
+  }
+
+  getStates(Values country) {
+    String url = CodingChallengeAPI.stateUrl
+        .replaceAll("country_id", country.id.toString());
+    ref.read(statesNotifierProvider.notifier).getStates(url: url);
   }
 
   @override
@@ -97,11 +105,30 @@ class HomeState extends ConsumerState<Home> {
               excludeSelected: false,
               onChanged: (value) {
                 showLog('changing value to: $value');
+                getStates(value);
               },
             ),
             const SizedBox(
               height: 30,
             ),
+            CustomDropdown<Values>.search(
+              hintText: 'Select State',
+              items: statesList,
+              headerBuilder: (context, selectedItem) {
+                return Text(selectedItem.value!);
+              },
+              decoration: CustomDropdownDecoration(
+                  closedBorder: Border.all(color: Colors.black87),
+                  closedBorderRadius:
+                      const BorderRadius.all(Radius.circular(15))),
+              listItemBuilder: (context, item, isSelected, onItemSelect) {
+                return Text(item.value!);
+              },
+              excludeSelected: false,
+              onChanged: (value) {
+                showLog('changing value to: $value');
+              },
+            )
           ],
         ),
       ),

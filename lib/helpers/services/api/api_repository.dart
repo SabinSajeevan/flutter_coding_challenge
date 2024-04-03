@@ -13,4 +13,13 @@ class ApiRepository {
 
     return compute(valuesModelFromJson, result);
   }
+
+  Future<ValuesModel> fetchStates(url) async {
+    RestAPIService restAPIService = RestAPIService(Dio());
+    var result = await restAPIService.getService(
+      url: url,
+    );
+
+    return compute(valuesModelFromJson, result);
+  }
 }
