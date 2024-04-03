@@ -1,6 +1,12 @@
 # flutter_coding_challenge
 This project implements a simple Flutter application with two dropdown menus: one for selecting a country and another for selecting a state. The country list and corresponding state lists are loaded from a provided API (documentation not included).
-
+<table width="100%" border="0">
+  <tr>    
+  <td><img src="https://github.com/SabinSajeevan/flutter_coding_challenge/assets/59957418/f606d212-5dc4-436a-9a17-5be966b8be27" ></td>
+<td><img src="https://github.com/SabinSajeevan/flutter_coding_challenge/assets/59957418/911c92a8-9d55-481a-9936-074fd811a6cc" ></td>
+  <td><img src="https://github.com/SabinSajeevan/flutter_coding_challenge/assets/59957418/2304a040-79bb-4343-afd2-f05ffab65b91"></td>
+</tr>
+</table>
 Project Structure:
 
 lib/: Contains all the Dart source code for the application.
