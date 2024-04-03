@@ -8,6 +8,9 @@ class CountryNotifier extends StateNotifier<ResponseState> {
   CountryNotifier(this._apiRepository)
       : super(ResponseState(isLoading: false, isError: false));
 
+  String selectedCountry = '';
+  String selectedState = '';
+
   Future<void> getCountries({bool init = true}) async {
     try {
       if (init) state = state.copyWith(isLoading: true);
@@ -18,5 +21,13 @@ class CountryNotifier extends StateNotifier<ResponseState> {
       state = state.copyWith(
           errorMessage: e.toString(), isLoading: false, isError: true);
     }
+  }
+
+  setSelectedCountry(String? country) {
+    selectedCountry = country!;
+  }
+
+  setSelectedState(String state) {
+    selectedState = state;
   }
 }
