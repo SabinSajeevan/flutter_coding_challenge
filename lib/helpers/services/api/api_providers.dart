@@ -13,3 +13,8 @@ final countriesNotifierProvider =
     StateNotifierProvider<CountryNotifier, ResponseState>(
   (ref) => CountryNotifier(ref.watch(homeApiRepositoryProvider)),
 );
+
+final statesNotifierProvider =
+    StateNotifierProvider<StatesNotifier, ResponseState>(
+  (ref) => StatesNotifier(ref.watch(homeApiRepositoryProvider)),
+);

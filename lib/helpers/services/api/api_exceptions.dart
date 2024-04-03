@@ -33,21 +33,21 @@ class RestAPIException implements Exception {
   String? _handleError(int? statusCode, data) {
     switch (statusCode) {
       case 400:
-        return data['message'];
+        return "Bad Request";
       case 401:
-        return data['message'];
+        return "Unauthorized";
       case 403:
-        return data['message'];
+        return "Forbidden";
       case 404:
-        return data['message'];
+        return "Not Found";
       case 405:
-        return data['message'];
+        return "Method Not Allowed";
       case 409:
-        return data['message'];
+        return "Conflict";
       case 410:
-        return data['message'];
+        return "Gone";
       case 422:
-        return data['message'];
+        return "Unprocessable Content";
       case 500:
         return 'Internal server error';
       default:
