@@ -10,30 +10,33 @@ This project implements a simple Flutter application with two dropdown menus: on
 </table>
 Project Structure:
 
-lib/: Contains all the Dart source code for the application.
-main.dart: The main entry point of the application.
-modules/: Contains screens used in the application.
-constants/: Contains api end-points used in the application.
-providers/: Contains any providers used in the application.
-models/: Contains any data models used in the application.
-helpers/: Contains common helping tools and common used custom widgets used in the application.
-helpers/services/api/: Contains any services used for data fetching or API interaction.
-pubspec.yaml: The project's configuration file.
+<br/>lib/: Contains all the Dart source code for the application.
+<br/>main.dart: The main entry point of the application.
+<br/>modules/: Contains screens used in the application.
+<br/>constants/: Contains api end-points used in the application.
+<br/>providers/: Contains any providers used in the application.
+<br/>models/: Contains any data models used in the application.
+<br/>helpers/: Contains common helping tools and common used custom widgets used in the application.
+<br/>helpers/services/api/: Contains any services used for data fetching or API interaction.
+<br/>pubspec.yaml: The project's configuration file.
+
 Dependencies:
 
 This project uses the following Flutter packages:
 
-flutter: The core Flutter framework.
-dio: Used for making API requests if applicable.
-google_fonts: Used for using multiple google fonts if applicable.
-animated_custom_dropdown: Used for implementing the dropdown menus.
-cupertino_icons: Used for the country and state dropdown icons.
-flutter_riverpod : Used for managing the application state.
+<br/>flutter: The core Flutter framework.
+<br/>dio: Used for making API requests if applicable.
+<br/>google_fonts: Used for using multiple google fonts if applicable.
+<br/>animated_custom_dropdown: Used for implementing the dropdown menus.
+<br/>cupertino_icons: Used for the country and state dropdown icons.
+<br/>flutter_riverpod : Used for managing the application state.
+
 Getting Started:
 
-Clone this repository.
-Install the dependencies by running flutter pub get in the project directory.
-Run the application using flutter run.
+<br/>Clone this repository.
+<br/>Install the dependencies by running flutter pub get in the project directory.
+<br/>Run the application using flutter run.
+
 Testing:
 
 Note: Unit tests are recommended for data fetching logic and any custom functionalities. You can use a testing framework like test or mockito. While not implemented in this version, consider adding them in the future.
